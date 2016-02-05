@@ -1,2 +1,2 @@
-# finito
-A todo app.
+# SprintFire Marketplace
+Rails App.
