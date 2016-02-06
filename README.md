@@ -1,2 +1,0 @@
-# SprintFire Marketplace
-Rails App.
