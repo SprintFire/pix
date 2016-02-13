@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     sign_up: 'join' 
   }
 
-  root to: "home#index"
+  root to: "page#index"
 
 
 
