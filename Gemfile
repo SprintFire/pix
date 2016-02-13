@@ -36,3 +36,5 @@ group :development, :test do
   gem 'rack-livereload'
 end
 
+gem 'rails_12factor', group: :production
+
