@@ -90,6 +90,7 @@ GEM
     git-version-bump (0.15.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gravtastic (3.2.6)
     guard (2.13.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, <= 4.0)
@@ -271,6 +272,7 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-rails
+  gravtastic
   guard-livereload (~> 2.4)
   haml-rails (~> 0.9)
   jbuilder (~> 2.0)

@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'font-awesome-rails'
 
+gem 'gravtastic'
+
 gem 'devise'
 gem "haml-rails", "~> 0.9"
 gem 'premailer-rails'
