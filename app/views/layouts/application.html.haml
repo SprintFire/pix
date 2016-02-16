@@ -1,0 +1,14 @@
+!!!
+%html.no-js{ lang: 'eng' }
+  %head
+    = render 'shared/head'
+  %body
+
+    = render 'shared/flash_banner'
+    = render 'shared/header'
+
+    #main
+      .container
+        = yield
+
+    = render 'shared/footer'
