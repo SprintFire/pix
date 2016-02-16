@@ -1,33 +1,13 @@
 #top
-  .container
-    %nav.navbar.navbar-dark
-      %button.navbar-toggler.hidden-sm-up{ 'aria-controls' => 'navbar-header', 'data-target' => '#navbar-header', 'data-toggle' => 'collapse', type: 'button' }
-        &#9776;
-
-      #navbar-header.collapse.navbar-toggleable-xs
-        = link_to root_url, class: 'navbar-brand' do
-          = image_tag 'logo.png', id: 'logo'
-          %small.logo-label
-            %i beta
-
-        %ul.nav.navbar-nav
-          %li.nav-item.active
-            = link_to 'Request Invite', "#", class: 'nav-link request_invite'
-
-
-        %ul.nav.navbar-nav.pull-xs-right
-          - if current_user
-            %li.nav-item.dropdown
-              = link_to '#', class: 'nav-link dropdown-toggle', role: 'button', 'aria-expanded' => 'false', 'aria-haspopup' => 'true', 'data-toggle' => 'dropdown' do
-                = image_tag current_user.gravatar_url(:size => 60), class: "img-rounded avatar"
-                Hello,
-                %strong= current_user.name || 'there'
-              .dropdown-menu.dropdown-menu-right{ 'aria-labelledby' => 'Account' }
-                = link_to '#', 'Dashboard', class: 'dropdown-item'
-                .dropdown-divider
-                = link_to('Logout', destroy_user_session_path, :method => :delete, :class => "dropdown-item")
-          - else
-            %li.nav-item
-              = link_to 'Login', new_user_session_path, class: 'nav-link'
-            %li.nav-item
-              = link_to 'Register', new_user_registration_path, class: 'nav-link'
+  %nav.navbar.navbar-static-top
+    %button.navbar-toggler.hidden-sm-up{"aria-controls" => "navbar-header", "data-target" => "#navbar-header", "data-toggle" => "collapse", :type => "button"}
+      ☰
+    #navbar-header.collapse.navbar-toggleable-xs
+      =link_to 'Pix', root_path, class: 'navbar-brand'
+      %ul.nav.navbar-nav
+        %li.nav-item.active
+          =link_to 'Home', root_path, class: 'nav-link'
+        %li.nav-item.pull-xs-right
+          =link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link'
+        %li.nav-item.pull-xs-right
+          =link_to 'Join', new_user_session_path, class: 'nav-link'
